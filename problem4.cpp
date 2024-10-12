@@ -1,4 +1,3 @@
-// Online C++ compiler to run C++ program online
 #include <iostream>
 
 int main() {
@@ -19,9 +18,13 @@ int main() {
   hour24format += shift;
   
   int shiftedHour24format = (hour24format % 24);
-  bool amResult = (shiftedHour24format < 13);
+  bool amResult = (shiftedHour24format < 12);
   
-  int result = (amResult ? shiftedHour24format : (shiftedHour24format % 12));
+  int result = (shiftedHour24format % 12);
+  if(!result)
+  {
+      result = 12;
+  }
   
   std::cout << "New hour: " << result << ' ' << (amResult ? "am" : "pm") << std::endl;
   
