@@ -1,9 +1,11 @@
 #include <iostream>
 
 int main() {
-    for(int i = 1; i <= 51; ++i)
+    int i = 1;
+    while (i <= 51)
     {
         std::cout << i << std::endl;
+        ++i;
     }
     return 0;
 }
